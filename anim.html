@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Using CSS -->
+   <link rel="stylesheet" href="anim.css">
+</head>
+<body>
+    <div id="main">
+        <div id="center">
+            <div class="text">
+                <h1>Hulk.</h1>
+                <h1>Ironman.</h1>
+                <h1>Venom.</h1>
+            </div>
+            <div  id="one"class="imagecontainer">
+                <img src="https://free4kwallpapers.com/uploads/originals/2020/05/01/the-incredible-hulk-wallpaper1.jpg" alt="hulk">
+            </div>
+
+            <div class="imagecontainer">
+                <img src="https://wallpapers.com/images/featured/iron-man-ouqxo5w2b59h0042.jpg" alt="ironman">
+            </div>
+
+            <div  class="imagecontainer">
+                <img src="https://images3.alphacoders.com/941/941028.jpg" alt="venom">
+            </div>
+        </div>
+    </div>
+
+
+<!-- Using JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    //    gsap.to("#one",{
+    //     width:"100%",
+    //     ease: Expo.easeInOut,
+    //     duration:2
+    //    })
+
+    gsap.to(".imagecontainer",{
+            ease: Expo.easeInOut,
+            width: "100%",
+            duration: 2,
+            stagger: 2
+         })
+
+         gsap.to(".text h1",{
+            ease: Expo.easeInOut,
+            duration: 2,
+            stagger: 2,
+            top: 0
+         })
+
+         gsap.to(".text h1",{
+            delay: 2,
+            ease: Expo.easeInOut,
+            duration: 2,
+            stagger: 2,
+            top: "-100%"
+         })
+    </script>
+</body>
+</html>
